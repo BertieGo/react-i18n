@@ -1,44 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-i18n
 
-## Available Scripts
+[![NPM](https://img.shields.io/npm/v/react-modern-library-boilerplate.svg)](https://www.npmjs.com/package/react-modern-library-boilerplate) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-In the project directory, you can run:
+> 基于 React 开发的轻量级国际化方案
 
-### `yarn start`
+## Usage
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+npm : ````  npm install rc-i18n ````  
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+yarn : ```` yarn add rc-i18n ````
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Examples
+首先需要根据语言配置 ``i18n.json`` 文件，例如:
+````
+{
+  "zh-CN": {
+    "say_hi": "你好!"
 
-### `yarn build`
+  },
+  "en-US": {
+    "say_hi": "Hi!"
+  }
+}
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+````
+在代码内，引入与使用方式：
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+````
+import I18n, { injectAsyncI18n } from './rc-i18n';
+// 需要提前注入 i18n.json 配置
+injectAsyncI18n('TEST', require('./i18n'));
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+render() {
+    <I18n  region={'TEST'} i18n="say_hi" />
+}
+````
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## NPM
+[rc-i18n](https://www.npmjs.com/package/rc-i18n)
