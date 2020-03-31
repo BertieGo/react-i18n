@@ -2,11 +2,10 @@
 
 [![NPM](https://img.shields.io/npm/v/react-modern-library-boilerplate.svg)](https://www.npmjs.com/package/react-modern-library-boilerplate) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-> Frontend internationalization component base React 
+> 基于 React 开发的轻量级国际化方案
 
 ## Language
-[Chinese](https://github.com/BertieGo/react-i18n/blob/master/README-CN.md)
-
+[English](https://github.com/BertieGo/react-i18n)
 
 ## Usage
 
@@ -16,7 +15,7 @@ yarn : ```` yarn add rc-i18n ````
 
 
 ## Examples
-First, base on your language requirement to config ``i18n.json`` file, just like: 
+首先需要根据语言配置 ``i18n.json`` 文件，例如:
 ````
 {
   "zh-CN": {
@@ -29,7 +28,8 @@ First, base on your language requirement to config ``i18n.json`` file, just like
 }
 
 ````
-In your code, import & usage:
+在代码内，引入与使用方式：
+
 ````
 import I18n, { injectAsyncI18n } from './rc-i18n';
 // 需要提前注入 i18n.json 配置
@@ -42,13 +42,13 @@ render() {
 
 ## API
 - **getCurrentLanguage**: (): CN-zh | en-US  
-get current language in window locale
+获取当前语言
 
 - **switchLanguage**: (l: CN-zh | en-US)   
-switch language with ``CN-zh | en-US ``
+切换语言
 
 - **get**: (region: string, i18n: string, params: {[name]: string }) : string  
-get local language value
+获取某个语言字段
 
 
 ## NPM
