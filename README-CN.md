@@ -41,13 +41,13 @@ render() {
 ````
 
 ## API
-- **getCurrentLanguage**: (): CN-zh | en-US  
+- **getCurrentLanguage**: ``(): CN-zh | en-US  ``  
 获取当前语言
 
-- **switchLanguage**: (l: CN-zh | en-US)   
+- **switchLanguage**:``(language: CN-zh | en-US): void  ``  
 切换语言
 
-- **get**: (region: string, i18n: string, params: {[name]: string }) : string  
+- **get**: ``(region: string, i18n: string, params: {[name]: string }) : string  ``  
 获取某个语言字段
 
 

@@ -32,7 +32,7 @@ First, base on your language requirement to config ``i18n.json`` file, just like
 In your code, import & usage:
 ````
 import I18n, { injectAsyncI18n } from './rc-i18n';
-// 需要提前注入 i18n.json 配置
+// you need to inject i18n.json frist
 injectAsyncI18n('TEST', require('./i18n'));
 
 render() {
@@ -41,13 +41,13 @@ render() {
 ````
 
 ## API
-- **getCurrentLanguage**: (): CN-zh | en-US  
+- **getCurrentLanguage**: ``(): CN-zh | en-US  ``  
 get current language in window locale
 
-- **switchLanguage**: (l: CN-zh | en-US)   
+- **switchLanguage**:``(language: CN-zh | en-US): void  ``  
 switch language with ``CN-zh | en-US ``
 
-- **get**: (region: string, i18n: string, params: {[name]: string }) : string  
+- **get**: ``(region: string, i18n: string, params: {[name]: string }) : string  ``  
 get local language value
 
 
